@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Processing Web App</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <h1>Image Processing Web App</h1>
+    </nav>
+</header>
+
+<main>
+    <section class="upload-section">
+        <h2>Upload Images</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="imageInput" class="file-label">
+                <input type="file" id="imageInput" accept="image/*" multiple>
+                <span>Choose Image</span>
+            </label>
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+
+    <section class="image-display">
+        <h2>Original Image</h2>
+        <div id="originalImageContainer" class="image-container"></div>
+
+        <h2>Processed Image</h2>
+        <div id="processedImageContainer" class="image-container"></div>
+    </section>
+
+    <section class="filter-section">
+        <h2>Filters</h2>
+        <div class="filters">
+            <button id="grayscaleFilter">Grayscale</button>
+            <button id="invertFilter">Invert</button>
+            <button id="sepiaFilter">Sepia</button>
+        </div>
+    </section>
+
+    <section class="crop-section">
+        <h2>Crop Image</h2>
+        <div class="crop-options">
+            <label for="cropX">X:</label>
+            <input type="number" id="cropX" placeholder="X">
+            <label for="cropY">Y:</label>
+            <input type="number" id="cropY" placeholder="Y">
+            <label for="cropWidth">Width:</label>
+            <input type="number" id="cropWidth" placeholder="Width">
+            <label for="cropHeight">Height:</label>
+            <input type="number" id="cropHeight" placeholder="Height">
+            <button id="cropButton">Crop</button>
+        </div>
+    </section>
+
+    <section class="resize-section">
+        <h2>Resize Image</h2>
+        <div class="resize-options">
+            <label for="resizeWidth">Width:</label>
+            <input type="number" id="resizeWidth" placeholder="Width">
+            <label for="resizeHeight">Height:</label>
+            <input type="number" id="resizeHeight" placeholder="Height">
+            <button id="resizeButton">Resize</button>
+        </div>
+    </section>
+
+    <section class="rotate-section">
+        <h2>Rotate Image</h2>
+        <div class="rotate-options">
+            <label for="rotateAngle">Angle (degrees):</label>
+            <input type="number" id="rotateAngle" placeholder="Angle">
+            <button id="rotateButton">Rotate</button>
+        </div>
+    </section>
+
+    <section class="flip-section">
+        <h2>Flip Image</h2>
+        <div class="flip-options">
+            <button id="flipHorizontalButton">Flip Horizontal</button>
+            <button id="flipVerticalButton">Flip Vertical</button>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
